@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <!-- <div class="row">
+        <button onclick="increment()" id="inc">Increment</button>
+        <button onclick="decrement()" id="dec">Decrement</button>
+    </div>
+    <span id="counter">0</span> -->
+    <ul>
+        <li>Text1</li>
+        <li>Text2</li>
+        <li>Text3</li>
+        <li>Text4</li>
+    </ul>
+    <script>
+        // let counter = 0
+
+        // function increment() {
+        //     var count = document.getElementById('counter')
+        //     counter++
+        //     count.innerText = counter
+        // }
+        // function decrement() {
+        //     var count = document.getElementById('counter')
+        //     counter--
+        //     count.innerText = counter
+        // }
+        // let list = document.querySelector('ul li')
+        // console.log(list)
+        let listAll = document.querySelectorAll('li')
+        console.log(listAll)
+
+        for (let index = 0; index < listAll.length; index++) {
+            if(index%2==0)
+                listAll[index].style.background = 'yellow'
+                else
+                listAll[index].style.background = 'red'
+
+        }
+    </script>
+   
+</body>
+</html>

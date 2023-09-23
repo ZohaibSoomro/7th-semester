@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Increment()" id="inc">Add Elements</button>
+    <button onclick="Decrement()" id="dec">Remove Element</button>
+    <div class="list1">
+
+    </div>
+
+    <h1>Counter Value:<span class="disp">0</span></h1>
+
+    <script type="text/javascript">
+        const disp=document.querySelector('.disp')
+        let count=0
+        const list1=document.querySelector('.list1')
+        const obj={
+            name:'Naveen',
+            age:26
+        }
+        function Increment(){
+            count++
+            disp.innerHTML=count
+            const child=document.createElement('p')
+//            child.innerHTML = '<b>Counter: </b>'+count
+
+//            child.innerHTML='Child1'
+            const textNode = document.createTextNode('Counter: ')
+            const bolder=document.createElement('b')
+            bolder.appendChild(textNode)
+
+            const textNode2 = document.createTextNode(count)
+            child.appendChild(bolder)
+            child.appendChild(textNode2)
+            
+            list1.appendChild(child)
+        }
+
+        function Decrement(){
+            list1.removeChild(list1.lastChild)
+            count--
+            disp.innerHTML=count
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+desturcturing
+const arr=[1,2,3]
+const arr2=[4,5,6]
+const arr3=[...arr, ...arr2]
+
+//hoisting
+//can be called before creation
+function abc(){
+
+}
+
+// cant be called before creation
+const bcd = () => {
+
+}
+//lexical scoping
+const cde = (args) => {
+        return args ** 2
+}
+
+or
+
+const cde = (args) => args ** 2 
+
+//array functions advanced
+const arr=[1,2,3,4,5,6]
+for(let i=0; i<arr.length; i++){
+        const el= arr[i]
+}
+const newMappedArray = arr.map(function(element){
+        console.log(element)
+        return 100
+})
+console.log(arr,newMappedArray)
+
+//filer
+//foreach
+
+
+//text break - use these commas
+const about= `my name is
+
+
+naveen kumar`
+
+const person = {
+        name: 'Naveen'
+        age: 26
+}
+
+const about= 'My name is '+person['name']+' and my age is '+person[age]
+or
+const about= 'My name is ${person['name']} and my age is $(person[age])' 
+
+//promises and fetch
+
+
+
+
+setAttribute

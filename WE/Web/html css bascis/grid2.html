@@ -1,0 +1,38 @@
+<!doctype html>
+<title>gridview</title>
+<style>
+body { 
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "nav article"
+    "nav footer";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 20% 1fr;
+  grid-gap: 10px;
+  height: 100vh;
+  margin: 0;
+  }
+header, footer, article, nav, div {
+  padding: 20px;
+  background: gold;
+}
+#pageHeader {
+  grid-area: header;
+}
+#pageFooter {
+  grid-area: footer;
+}
+#mainArticle { 
+  grid-area: article;      
+  }
+#mainNav { 
+  grid-area: nav; 
+  }
+</style>
+<body>
+  <header id="pageHeader">Header</header>
+  <article id="mainArticle">Article</article>
+  <nav id="mainNav">Nav</nav>
+  <footer id="pageFooter">Footer</footer>
+</body>

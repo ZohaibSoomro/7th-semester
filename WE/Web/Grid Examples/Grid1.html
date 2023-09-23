@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Document</title>
+    <style>
+        .header{
+            grid-area: header;
+        }
+        .content{
+            grid-area: content;
+        }
+        .footer{
+            grid-area: footer;
+        }
+        .sidebar{
+            grid-area: sidebar;
+        }
+        .wrapper{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            grid-template-areas: 
+            "...... header header"
+            "sidebar content content"
+            "sidebar footer footer";
+            grid-gap: 10px;
+        }
+        .box {
+            background: gray;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box header">header</div>
+        <div class="box content">content</div>
+        <div class="box footer">footer</div>
+        <div class="box sidebar">sidebar</div>
+       </div> 
+</body>
+</html>

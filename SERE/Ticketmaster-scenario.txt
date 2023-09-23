@@ -1,0 +1,13 @@
+Ticketmaster.com: This B2C website sells tickets of concerts, sporting events, and other live performances.
+
+Ticketmaster.com could experience delays in processing customer requests due to high traffic here's a scenario:
+
+It's the day that tickets go on sale for a highly-anticipated concert by a popular artist. Fans of the artist have been eagerly waiting for this day for weeks, and many have set their alarms to wake up early and be among the first to purchase tickets.
+
+At 10:00 AM, the tickets go on sale, and thousands of fans simultaneously try to access the Ticketmaster website to purchase tickets. The sudden surge of traffic causes the website to slow down, and some customers are unable to load the website at all.
+
+Those who do manage to access the website find that the process of selecting seats and completing the purchase takes longer than usual, with some customers reporting that the website freezes or times out before they can complete their purchase. Others report that their preferred seats are sold out by the time they reach the checkout page.
+
+The high volume of traffic continues for several hours, with fans refreshing the website and trying to purchase tickets throughout the day. While the website eventually stabilizes and returns to normal performance, many fans are left frustrated and disappointed by their inability to purchase tickets or the delays they experienced in the process.
+
+Ticketmaster may issue an apology to customers, acknowledging the high volume of traffic and the impact it had on the website's performance. They may also take steps to improve their website's performance during future high-traffic events, such as adding additional server capacity or implementing queueing systems to manage the flow of customers. or applying some sort of re-engineering techniques.

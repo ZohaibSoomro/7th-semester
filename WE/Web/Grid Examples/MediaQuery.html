@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .header{
+            grid-area: header;
+        }
+        .footer{
+            grid-area: footer;
+        }
+        .section{
+            grid-area: section;
+        }
+        .sidebar1{
+            grid-area: siderbar1;
+        }
+        .sidebar2{
+            grid-area: siderbar2;
+        }
+        .wrapper{
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(5, 20%);
+            grid-template-areas: 
+            "header"
+            "siderbar1"
+            "section"
+            "siderbar2"
+            "footer";
+        }
+        .box{
+            background: gray;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        @media only screen and (min-width:800px) and (max-width:1100px) {
+            .wrapper{
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "header header"
+            "siderbar1 section"
+            "siderbar2 section"
+            "footer footer";
+            }   
+        }
+        @media only screen and (min-width:400px) and (max-width:799px) {
+            .wrapper{
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "header header header"
+            "siderbar1 section siderbar2"
+            "footer footer footer";
+            }   
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box header">header</div>
+        <div class="box section">section</div>
+        <div class="box siderbar1">siderbar1</div>
+        <div class="box siderbar2">siderbar2</div>
+        <div class="box footer">footer</div>
+    </div>
+</body>
+</html>

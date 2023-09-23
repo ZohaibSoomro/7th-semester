@@ -1,0 +1,160 @@
+Reengineering:
+////////////////////////////////////////////
+It is the process of examining, analsing and restructureing the 
+existing software in a new form.
+It is usually done in order to make a software to use the latest technologies instead
+of legacy technologies.
+
+Reengineering is the sequence of three activities strongly founded on the principles 
+of abstraction, altration& refinemnet, those actvities are
+reverse engineering, re-designing & forward engineering.
+Eric Byrne: (rethink,respecify,redesign,re-code) picture----
+
+Reengineering entails:
+(a)to create abstract view of a system by means of reverse engineering activities.
+(b) restructureing the system into abstract view
+(c) implementing the system by means of some forward engineering activities
+This can be expressed as equation given by Jacobson & Lindstorm:
+Reengnering=Reverse Eng+ Delta+ Forward Eng
+The delta here captures all the alterations made to the system.
+the alterations can be of two dimensions: 
+1)changing in fuctionality which comes as result of change in business rule
+2)changing in implementataion technique: Should be in a way that end-user  neer know 
+sytem is implemented in OOP language or procedural language.
+
+Goal of Reengineering is:
+1) to understand existinig software artifacts including specifcation, architecture design, implementataion & documentataion etc.
+2) to improve functionality and quality attributes of system
+
+Objectives:
+to improve maintainanbility
+To migrate to a new technology
+to improve quality
+to prepare for functionlity enchacement
+
+Reengineering Concepts:
+/////////////////////////////////////////////
+Abstraction and Refinement:
+ // are core concepts used in both software development and software reengineering.
+The abstraction helps in reducing complexity of understanding a system because it
+a) Focuses on main characteristics of system
+b) and it hides the irrelevant details.
+While refinement is the reverse process of abstraction.
+
+Both are used to create models of software development as sequence of phases and and maps phases to a specific level of abstraction/refinement.
+Talking bout level there are four levels of abstraction:
+Conceptual: It answers questions of "Why?" type
+Requirement: What?
+Design: 	What and why?	
+Implementation: How?
+
+Principle of Abstractaion:
+	"The level of abstraction of the representation of a system can be gradually 
+	increased by successively replacing the details with abstract information. 
+	By means of abstraction one can produce a view that focuses on selected system 
+	characteristics by hiding information about other characteristics."
+
+Principle of Refinement:
+	"The level of abstraction of the representation of the system 
+	is gradually decreased by successively replacing some aspects
+	 of the system with more details."
+
+An optional principle called alteration underlies many reengineering methods. 
+
+Principle of alteration: 
+ " The making of some changes to a system representation is known as alteration. 
+ 	Alteration does not involve any change to the degree of abstraction, 
+ 	and it does not involve modification, deletion, and addition of information.
+
+ All these principals are represented by means of arrows.
+ Principle          arrow type
+ Abstraction:	    up-arrow(slanted)
+ Refinement			down-arrow(slanted)
+ Alteration			horizontal-arrow
+
+ The arrows representing abstraction & refinement are slanted to indicate 
+ increase and decrease of system details. The alteration process is optional
+  and is non-essential to carry out reengineering process.
+
+Forward Engineering:
+It is the process of going from higher level of abstraction to the lowest level. This process follows a sequence of activities which include, formulating concepts of system,identifying requirements, designing the system & implementing that design.
+A new software is created using forward engineering technique.
+
+Reverse Engineering:
+It is the reverse process of Forward engineering where we go from lower level to higher level of abstraction.It comprises of following steps:
+a)analyze the software to determine its components and their reltionship
+b)represent the system at a higher level of abstraction/in another form.
+Example: Decompilation is a example of reverse engineering where object code is converted back to a high-level program.
+
+
+Rehosting:
+It is the process of reengineering the source code of a system without any addition or
+reduction of features in the transformed targeted source code.
+Rehisting is effective when the user is satisfied with the look & represntataion of
+system but want quality to be improved. 
+exmaple can be system with improved efficiency of execution,, reduced maintenancce cost.
+
+
+Sytem characteristcs are divided into following groups based on types of change required,
+Rethink:
+	Source code of existing sw is transformed by recoding it which can be done  either
+	program paraphrasing(refactoring,normalization,optimization) or program translation(compilation,decomplation,migration).
+Redesign:
+	Design characteristics are altered by redesigning the system, and the common changes include:
+	1) restructureing the architecture,
+	2) modifying data models of system,
+	3) replacing the procedure/algorithms with more efficient ones.
+Respecify:
+	Requirement characteristics can be altered by two ways:
+		1)changing form of requirements
+		2)changing scope of requirements
+Rethink:
+	Rethinking invloves changing the concepts embodied in the system or creating a system
+	to operate in a new problem domain.
+	Changing conceptual characteractistics can lead the system to change ina fundamental way.
+	e.g development from cellular mobile phones to touch screen mobile phones.
+
+Reengineering strategies:
+They define basic steps of reengineering:
+
+1. Rewrite:
+	it relects the principle of alteration. The term altration means the system is chaged into 
+	new form without changing the level of abstraction.
+	e.g: fortran code transformed into C-language code.
+
+2. ReWork:
+	it reflects all the three principles.
+	for example : Reengineering is performed to remove the unstrutctur CFG constructs goto
+	 				statements to	the common used constructs like a for loop.
+	a rework strategy works like:
+	Abstraction: Code is parsed and control flow graph is generated for the given system. 
+	Alteration: The unstructured cfg is transformed into structured cfg by applying an 
+				 restructuring algorithm
+	Refinement: The strcutured cfg is transformed back into programming lanugauge.
+
+3. Replace:
+	It relects the two principles namely, abstraction & refinement
+	applications of principles:
+	a replace strategy changes characteristics as:
+	Abstraction: the system is reconstructed at a higher level of abstraction by hiding details
+					of characteristic.
+	Refinement:  a suitable repsentataion for  target system is generated at low level 
+					of abstraction by applying refinement
+	e.g: by means of abstraction, the program is represented at a higher level of abstraction 
+				without using CFG concepts.
+			next by means of refinment, the system is represented at lower level of abstraction
+				b with new strcutured control flow graph
+
+			let :
+			Alteration(->)
+			Abstraction(/)
+			Refinment(\)
+
+			then 
+			rewrite:
+				->
+			rework:
+				 ->
+			    /  \
+			replace:
+				 /\

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Typing Animation using HTML CSS</title>
+    <link rel="stylesheet" href="ln.css">
+</head>
+
+<body>
+    <div class="data">
+        <div class="wrapper">
+            <div class="static-txt">I'm</div>
+            <ul class="dynamic-txts">
+                <li><span>Alex</span></li>
+                <li><span>a Lecturer</span></li>
+                <li><span>a Developer</span></li>
+                <li><span>a Gamer</span></li>
+            </ul>
+        </div>
+        <div class="about">
+            <p>My Name is Alex. I am a Lecturer at SWE Dept. MUET Jamshoro</p>
+            <button id="CV">Download CV</button>
+            <button id="Hire">Hire ME</button>
+        </div>
+    </div>
+    <img class='image' src="man.png" alt="image here">
+    <span onclick="hide()" class="hide" id="hid">.</span>
+
+
+    <script type="text/javascript">
+        let flag=true;
+        function hide(){
+            if(flag === true){
+                document.getElementById('CV').style.display='none'
+                document.getElementById('Hire').style.display='none'
+                document.getElementById('hid').style.color='red'
+                flag=false
+            }
+            else{
+                document.getElementById('CV').style.display='inline-block'
+                document.getElementById('Hire').style.display='inline-block'
+                document.getElementById('hid').style.color='green'
+                flag=false
+                flag=true
+            }
+        }
+    </script>
+</body>
+
+</html>

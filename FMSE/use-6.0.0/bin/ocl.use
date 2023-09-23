@@ -1,0 +1,34 @@
+model bankingsystem
+
+constraints
+context Bank 
+inv: 
+self.accounts->forAll(a1, a2 | a1 <> a2 implies a1.accountNumber <> a2.accountNumber) -- Each account should have a unique account number 
+self.accounts.customer->includesAll(Customer.allInstances()) -- Each account should be associated with a customer 
+self.transactions->forAll(t | t.sourceAccount <> t.destinationAccount) -- Transactions should not be between same account 
+self.transactions->forAll(t | self.accounts->includes(t.sourceAccount)
+and 
+self.accounts->includes(t.destinationAccount)) -- Transactions should be between valid accounts 
+self.transactions->forAll(t | t.amount >= 0) -- Transaction amount should always be positive 
+self.accounts.balance->forAll(b | b >= 0) -- Account balance should always be positive 
+self.accounts.withdrawLimit->forAll(l | l >= 0) -- Withdraw limit should always be positive self.accounts->forAll(a | a.balance <= a.withdrawLimit) -- Account balance should not exceed withdraw limit
+
+context Customer 
+inv: 
+self.accounts->forAll(a | Bank.allInstances().accounts->includes(a)) -- Each customer should have a valid account in Bank self.name <> '' -- Customer name should not be empty
+context Account 
+inv: 
+self.customer <> null -- Account should be associated with a customer
+self.balance >= 0 -- Account balance should always be positive self.withdrawLimit >= 0 -- Withdraw limit should always be positive 
+self.transactions->forAll(t | t.sourceAccount = self or t.destinationAccount = self) -- All transactions should be either from or to this account 
+self.transactions->forAll(t | t.amount <= self.balance) -- Transaction amount should not exceed account balance
+context Transaction 
+inv: 
+self.amount > 0 -- Transaction amount should always be positive self.sourceAccount <> null 
+and
+self.destinationAccount <> null -- Both source and destination accounts should be valid accounts 
+self.timestamp <> null -- Transaction should have a timestamp self in Bank.allInstances().transactions -- Transaction should be recorded in Bank system
+context AutomaticTransfer
+inv: 
+self.sourceAccount <> null and self.destinationAccount <> null -- Both source and destination accounts should be valid accounts 
+self.amount > 0 -- Transfer amount should always be positive self.period > 0 -- Transfer period should always be positive

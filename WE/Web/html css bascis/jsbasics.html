@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>
+        My Counter:
+        <span id="count">0</span>
+    </h1>
+
+
+    <ul>
+        <li>HELLO</li>
+        <li>HELLO</li>
+        <li>HELLO</li>
+    </ul>
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <button id="Inc">Increment</button>
+    <button id="Dec">Deccrement</button>
+
+
+
+    <script type="text/javascript">
+        const incr=document.querySelector('#Inc')
+        const decr = document.getElementById('Dec')
+        let count=0;
+        function Incrementer(){
+            const disp=document.getElementById('count')
+            count++;
+            disp.innerText=count
+            console.log(count)
+        }
+        incr.addEventListener('click',Incrementer)
+        function Decrementer(){
+            const disp=document.getElementById('count')
+            count--;
+            disp.innerHTML=count
+            console.log(count)
+        }
+        decr.addEventListener('click',Decrementer)
+
+        const list=document.querySelector('ul li')
+        console.log(list)
+
+        const listAll=document.querySelectorAll('ul li')
+        console.log(listAll)
+
+        for(let i=0; i<listAll.length; i++){
+        listAll[i].innerHTML='Changed'
+        }
+        
+
+    </script>
+</body>
+</html>
